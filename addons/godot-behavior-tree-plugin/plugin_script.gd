@@ -93,6 +93,13 @@ func _enter_tree():
 		preload("res://addons/godot-behavior-tree-plugin/mem_selector.gd"),
 		preload("res://addons/godot-behavior-tree-plugin/mem_selector_icon.png")
 	)
+		
+	add_custom_type(
+		"BehaviorParallel",
+		"Node",
+		preload("res://addons/godot-behavior-tree-plugin/parallel.gd"),
+		preload("res://addons/godot-behavior-tree-plugin/parallel_icon.png")
+	)
 
 	add_custom_type(
 		"BehaviorSequence",
@@ -126,7 +133,7 @@ func _enter_tree():
 		"BehaviorWait",
 		"Node",
 		preload("res://addons/godot-behavior-tree-plugin/wait.gd"),
-		preload("res://addons/godot-behavior-tree-plugin/action_icon.png")
+		preload("res://addons/godot-behavior-tree-plugin/wait_icon.png")
 	)
 
 func _exit_tree():
@@ -145,6 +152,7 @@ func _exit_tree():
 	remove_custom_type("BehaviorSelector")
 	remove_custom_type("BehaviorMemSelector")
 	remove_custom_type("BehaviorSequence")
+	remove_custom_type("BehaviorParallel")
 	remove_custom_type("BehaviorMemSequence")
 	remove_custom_type("BehaviorSucceeder")
 	remove_custom_type("BehaviorTree")
