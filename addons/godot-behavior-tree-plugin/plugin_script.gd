@@ -93,6 +93,13 @@ func _enter_tree():
 		preload("res://addons/godot-behavior-tree-plugin/mem_selector.gd"),
 		preload("res://addons/godot-behavior-tree-plugin/mem_selector_icon.png")
 	)
+	
+	add_custom_type(
+		"BehaviorGuardSelector",
+		"Node",
+		preload("res://addons/godot-behavior-tree-plugin/guard_selector.gd"),
+		preload("res://addons/godot-behavior-tree-plugin/selector_icon.png")
+	)
 		
 	add_custom_type(
 		"BehaviorParallel",

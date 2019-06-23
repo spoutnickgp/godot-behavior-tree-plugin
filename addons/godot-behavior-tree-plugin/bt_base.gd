@@ -33,6 +33,11 @@ func _close(tick):
 	tick.blackboard.set('isOpen', false, tick.tree, self)
 	close(tick)
 
+func _cancel(tick):
+	self._close(tick)
+	for c in get_children():
+		c._cancel(tick)
+
 func _exit(tick):
 	tick.exitNode(self)
 	exit(tick)
@@ -45,6 +50,7 @@ func open(tick):
 	pass
 
 func tick(tick):
+	print(self.name)
 	return OK
 
 func close(tick):
