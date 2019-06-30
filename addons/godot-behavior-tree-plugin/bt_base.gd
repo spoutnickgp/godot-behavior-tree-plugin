@@ -50,7 +50,7 @@ func open(tick):
 	pass
 
 func tick(tick):
-	print(self.name)
+#	print(self.name)
 	return OK
 
 func close(tick):
